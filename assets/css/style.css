@@ -1,0 +1,58 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #5d3bee;
+  --secondary-color: #fbfaff;
+  --heading-color: #080415;
+  --text-color: #51586a;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "DM Sans", sans-serif;
+  background: #fff;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 30px;
+  background: #ccc;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
