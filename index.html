@@ -85,8 +85,6 @@
 
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
-    <!-- Grid CSS -->
-    <link rel="stylesheet" href="./assets/css/grid.css" />
     <!-- Embed Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,6 +92,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- Grid CSS -->
+    <link rel="stylesheet" href="./assets/css/grid.css" />
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -101,29 +101,81 @@
     <!-- Header -->
     <header class="header">
       <div class="container">
-        <div class="body">Header</div>
+        <div class="header__body">
+          <div class="header__contact">
+            <div class="header__icon">
+              <img src="./assets/icon/mail.svg" alt="" class="header__letter" />
+            </div>
+            <a href="mailto:webmaster@example.com" class="header__mail">
+              hi@arif.interactive
+            </a>
+          </div>
+          <img src="./assets/img/memoji.png" alt="" class="header__memoji" />
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li>
+                <a href="#!" class="header__link">Projects</a>
+              </li>
+              <li>
+                <a href="#!" class="header__link">Journey</a>
+              </li>
+              <li>
+                <a href="#!" class="header__link">Service</a>
+              </li>
+              <li>
+                <a href="#!" class="header__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <div class="hero__body">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="body hero__left">Hero Left</div>
-            </div>
-            <div class="col-lg-5 offset-lg-2">
-              <div class="body hero__right">Hero Right</div>
+        <div class="hero__body row">
+          <!-- Hero Media -->
+          <div class="col-lg-5 col-12">
+            <figure class="hero__media">
+              <img src="./assets/img/hero-img.png" alt="" class="hero__img" />
+            </figure>
+          </div>
+          <!-- Hero Content -->
+          <div class="col-lg-5 offset-lg-2 col-12">
+            <div class="hero__content">
+              <h1 class="hero__heading">An Interactive Designer</h1>
+              <p class="section-desc hero__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                urna, non nisl tincidunt ut elementum turpis.
+              </p>
+              <div class="hero__cta">
+                <button class="btn">Book a Call</button>
+                <a href="" class="hero__link">My Works</a>
+              </div>
+              <div class="hero__connection">
+                <p class="section-desc hero__networks-desc">Follow me on:</p>
+                <div class="hero__networks">
+                  <a href="#!" class="hero__network">
+                    <img src="./assets/icon/media-01.svg" alt="" />
+                  </a>
+                  <a href="#!" class="hero__network">
+                    <img src="./assets/icon/media-02.svg" alt="" />
+                  </a>
+                  <a href="#!" class="hero__network">
+                    <img src="./assets/icon/media-03.svg" alt="" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <main>
+    <main style="height: 5000px">
       <!-- Client -->
-      <section class="clients">
+      <!-- <section class="clients">
         <div class="container">
           <div class="clients__body">
             <div class="row">
@@ -136,20 +188,20 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Specialty -->
-      <section class="specialty">
+      <!-- <section class="specialty">
         <div class="container">
-          <div class="specialty__body">
-            <!-- Special Top -->
-            <div class="row">
+          <div class="specialty__body"> -->
+      <!-- Special Top -->
+      <!-- <div class="row">
               <div class="col">
                 <div class="body">Specialties</div>
               </div>
-            </div>
-            <!-- Special Bottom -->
-            <div class="row row-cols-lg-3">
+            </div> -->
+      <!-- Special Bottom -->
+      <!-- <div class="row row-cols-lg-3">
               <div class="col">
                 <div class="body">Special 1</div>
               </div>
@@ -162,23 +214,23 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Project -->
-      <section class="project">
+      <!-- <section class="project">
         <div class="container">
-          <div class="project__body">
-            <!-- Project Top -->
-            <div class="row">
+          <div class="project__body"> -->
+      <!-- Project Top -->
+      <!-- <div class="row">
               <div class="col-lg-5">
                 <div class="body">Project Left</div>
               </div>
               <div class="col-lg-4 offset-1">
                 <div class="body">Project Right</div>
               </div>
-            </div>
-            <!-- Project Bottom -->
-            <div class="row row-cols-lg-2">
+            </div> -->
+      <!-- Project Bottom -->
+      <!-- <div class="row row-cols-lg-2">
               <div class="col">
                 <div class="body">Project 1</div>
               </div>
@@ -191,39 +243,39 @@
               <div class="col">
                 <div class="body">Project 4</div>
               </div>
-            </div>
-            <!-- Project Button -->
-            <div class="row">
+            </div> -->
+      <!-- Project Button -->
+      <!-- <div class="row">
               <div class="col-lg-2 offset-lg-5">
                 <div class="body">Button</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Interaction -->
-      <section class="interaction">
+      <!-- <section class="interaction">
         <div class="container">
-          <div class="interaction__body">
-            <!-- Inter Top -->
-            <div class="row">
+          <div class="interaction__body"> -->
+      <!-- Inter Top -->
+      <!-- <div class="row">
               <div class="col-lg-6 offset-lg-3">
                 <div class="body">Interaction Top</div>
               </div>
-            </div>
-            <!-- Inter Bot -->
-            <div class="row">
+            </div> -->
+      <!-- Inter Bot -->
+      <!-- <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="body">Interaction Bot</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Video -->
-      <section class="video">
+      <!-- <section class="video">
         <div class="container">
           <div class="video__body">
             <div class="row">
@@ -233,10 +285,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Feedback -->
-      <section class="feedback">
+      <!-- <section class="feedback">
         <div class="container">
           <div class="feedback__body">
             <div class="row">
@@ -246,22 +298,22 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Question??? -->
-      <section class="question">
+      <!-- <section class="question">
         <div class="container">
-          <div class="question__body">
-            <!-- Top -->
-            <div class="row">
+          <div class="question__body"> -->
+      <!-- Top -->
+      <!-- <div class="row">
               <div class="col-lg-6">
                 <div class="body">Question Top</div>
               </div>
-            </div>
-            <!-- Bottom -->
-          </div>
+            </div> -->
+      <!-- Bottom -->
+      <!-- </div>
         </div>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>
