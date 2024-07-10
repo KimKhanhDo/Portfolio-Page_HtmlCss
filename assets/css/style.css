@@ -87,6 +87,43 @@ button {
   cursor: pointer;
 }
 
+.section-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.section-dot {
+  margin-top: 40px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #cac9d0;
+  cursor: pointer;
+}
+
+.section-dot-active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  background: #fff;
+}
+.section-dot-active::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
 /* Header */
 .header {
   background: var(--secondary-color);
@@ -378,7 +415,6 @@ button {
 
 .project__heading {
   font-size: 5.6rem;
-  font-weight: 500;
   line-height: 1.18;
   letter-spacing: -2.24px;
   color: #fff;
@@ -423,7 +459,6 @@ button {
 
 .project__info-heading {
   font-size: 3.2rem;
-  font-weight: 500;
   line-height: 1.25;
   letter-spacing: -1.28px;
 }
@@ -498,7 +533,6 @@ button {
 .interaction__heading {
   margin: 10px 0 15px;
   font-size: 5.6rem;
-  font-weight: 500;
   line-height: 1.18;
   letter-spacing: -2.24px;
 }
@@ -544,4 +578,332 @@ button {
 }
 .interaction__stat-desc {
   margin-top: 9px;
+}
+
+/* Video */
+.video {
+  margin-top: 70px;
+  /* Video stays front of feedback block */
+  position: relative;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+
+.video__body {
+  position: relative;
+}
+
+.video__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 111px;
+  height: 111px;
+  border-radius: 50%;
+  background: #f9fafe;
+}
+
+.video__intro {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 62px;
+  background: #fff;
+}
+
+.video__label {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.67;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+/* Feedback */
+.feedback {
+  position: relative;
+  margin-top: -314px;
+  padding: 473px 0 74px;
+  background: var(--secondary-color);
+}
+
+.feedback__info {
+  text-align: center;
+}
+
+.feedback__heading {
+  font-size: 5.6rem;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -2.24px;
+}
+
+.feedback__desc {
+  margin-top: 20px;
+  width: 570px;
+  line-height: 1.67;
+}
+
+.feedback__bottom {
+  margin: 60px auto 0;
+}
+
+.feedback__list {
+  text-align: center;
+  /* For extra content feedback_item */
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.feedback__quote {
+  margin: 0 auto;
+  font-size: 2.4rem;
+  line-height: 1.67;
+  color: var(--text-color);
+}
+
+.feedback__user {
+  margin-top: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 7px;
+}
+
+.feedback__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.feedback__name {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.33;
+  color: var(--heading-color);
+}
+
+.feedback__job {
+  margin-top: 3px;
+  font-size: 1.6rem;
+  line-height: 1.81;
+  color: var(--text-color);
+}
+
+.feedback__decor {
+  display: block;
+}
+
+.feedback__decor-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.feedback__decor-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Question */
+.question {
+  margin-top: 95px;
+}
+
+.question__top {
+}
+
+.question__intro {
+}
+
+.question__heading {
+  font-size: 5.6rem;
+  line-height: 1.18;
+  letter-spacing: -2.24px;
+}
+
+.question__list {
+  margin-top: 80px;
+}
+
+.question__item {
+  position: relative;
+  padding: 0 0 21px 23px;
+  transition: margin-bottom 0.4s ease-in-out;
+}
+
+/* Create question line */
+.question__item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 50%;
+  width: 100%;
+  height: 2px;
+  background: #08182f;
+  transition: all 0.4s ease-in-out;
+}
+
+.question__title {
+  font-size: 3.2rem;
+  line-height: 1.25;
+  letter-spacing: -1.28px;
+}
+
+.question__answer {
+  margin-top: 23px;
+  width: 487px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out;
+}
+
+.question__icon {
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #d0d1d2;
+  cursor: pointer;
+  transition: border-color 0.4s ease-in-out;
+}
+
+.question__icon::before,
+.question__icon::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  background: #161a1c;
+}
+
+.question__icon::after {
+  width: 2px;
+  height: 14px;
+  transition: rotate 0.4s ease-in-out;
+}
+
+.question__item:has(:checked):not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.question__item:has(:checked)::before {
+  bottom: 0;
+  background: var(--primary-color);
+}
+
+.question__input:checked ~ .question__title {
+  color: var(--primary-color);
+}
+
+.question__input:checked ~ .question__answer {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.question__input:checked ~ .question__icon {
+  border-color: #dfd9fc;
+}
+
+.question__input:checked ~ .question__icon::before {
+  background: var(--primary-color);
+}
+
+.question__input:checked ~ .question__icon::after {
+  rotate: 90deg;
+  background: var(--primary-color);
+}
+
+/* Atmosphere */
+.atmosphere {
+  margin-top: 139px;
+}
+
+.atmosphere__top {
+}
+
+.atmosphere__intro {
+  text-align: center;
+}
+
+.atmosphere__heading {
+  font-size: 5.6rem;
+  line-height: 1.18;
+  letter-spacing: -2.24px;
+}
+
+.atmosphere__desc {
+  margin-top: 20px;
+}
+
+.atmosphere__tag {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -1.28px;
+  color: var(--primary-color);
+}
+
+.atmosphere__tag::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.atmosphere__media {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.atmosphere__bottom {
+  margin-top: 70px;
+}
+
+.atmosphere__image {
+  width: 370px;
+  height: 529px;
+}
+
+.atmosphere__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.atmosphere__dots {
+  /* display: none; */
 }
